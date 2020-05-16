@@ -3,7 +3,7 @@ const PATH = require('path');
 const APP = EXPRESS();
 
 //set the port
-APP.set('port', 8080);
+APP.set('port', 8081);
 
 //tell express that we want to use the www folder
 //for our static assets
