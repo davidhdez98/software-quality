@@ -1,0 +1,43 @@
+<testsuite name="Mocha Tests" tests="41" failures="0" errors="0" skipped="0" timestamp="Sat, 16 May 2020 15:21:04 GMT" time="0.073">
+<testcase classname="Test" name="Tests de la clase Point Getter de la coordenada X" time="0.001"/>
+<testcase classname="Test" name="Tests de la clase Point Getter de la coordenada Y" time="0"/>
+<testcase classname="Test" name="Tests de la clase Point Setter de la coordenada X" time="0"/>
+<testcase classname="Test" name="Tests de la clase Point Setter de la coordenada Y" time="0"/>
+<testcase classname="Test" name="Tests de la clase Point random crea un número aleatorio" time="0.001"/>
+<testcase classname="Test" name="Tests de la clase Line Constructor por defecto" time="0.001"/>
+<testcase classname="Test" name="Tests de la clase Line Getter de la pendiente de la recta" time="0"/>
+<testcase classname="Test" name="Tests de la clase Line Getter de la ordenada de la recta" time="0"/>
+<testcase classname="Test" name="Tests de la clase Line Setter de la pendiente de la recta" time="0"/>
+<testcase classname="Test" name="Tests de la clase Line Setter de la ordenada de la recta" time="0"/>
+<testcase classname="Test" name="Tests de la clase Line Método lineFromTo: calcula la recta entre dos puntos" time="0"/>
+<testcase classname="Test" name="Tests de la clase Line Método isPointInLine: true si el punto pertenece a la recta" time="0"/>
+<testcase classname="Test" name="Tests de la clase Square Getter del tamaño de la casilla" time="0"/>
+<testcase classname="Test" name="Tests de la clase Square Getter de la coordenada X inicial" time="0"/>
+<testcase classname="Test" name="Tests de la clase Square Getter de la coordenada Y inicial" time="0"/>
+<testcase classname="Test" name="Tests de la clase Square Getter de la etiqueta de la casilla" time="0"/>
+<testcase classname="Test" name="Tests de la clase Square Setter del tamaño de la casilla" time="0"/>
+<testcase classname="Test" name="Tests de la clase Square Setter de la coordenada X inicial" time="0"/>
+<testcase classname="Test" name="Tests de la clase Square Setter de la coordenada Y inicial" time="0"/>
+<testcase classname="Test" name="Tests de la clase Square Getter de la etiqueta de la casilla" time="0"/>
+<testcase classname="Test" name="Tests de la clase ChessBoard Getter del tamaño del tablero" time="0"/>
+<testcase classname="Test" name="Tests de la clase ChessBoard Getter del conjunto de casillas del tablero" time="0"/>
+<testcase classname="Test" name="Tests de la clase ChessBoard Setter del tamaño del tablero" time="0"/>
+<testcase classname="Test" name="Tests de la clase ChessBoard Setter del conjunto de casillas del tablero" time="0"/>
+<testcase classname="Test" name="Tests de la clase EightQueens Getter del tamaño del problema" time="0"/>
+<testcase classname="Test" name="Tests de la clase EightQueens Getter del tipo del problema" time="0"/>
+<testcase classname="Test" name="Tests de la clase EightQueens Getter del conjunto de reinas" time="0"/>
+<testcase classname="Test" name="Tests de la clase EightQueens Setter del tamaño del problema" time="0"/>
+<testcase classname="Test" name="Tests de la clase EightQueens Setter del tipo del problema" time="0"/>
+<testcase classname="Test" name="Tests de la clase EightQueens Setter del tipo del conjunto de reinas" time="0"/>
+<testcase classname="Test" name="Tests de la clase EightQueens Método comprobarReina: true si se puede introducir una reina" time="0.001"/>
+<testcase classname="Test" name="Tests de la clase EightQueens Método colocarReina: coloca las reinas en el tablero" time="0.062"/>
+<testcase classname="Test" name="Tests de la clase EightQueens Método visualizarTablero: visualiza en notación algebraica las soluciones" time="0.002"/>
+<testcase classname="Test" name="Tests de la clase Text Getter de la coordenada X de destino" time="0"/>
+<testcase classname="Test" name="Tests de la clase Text Getter de la coordenada Y de destino" time="0"/>
+<testcase classname="Test" name="Tests de la clase Text Getter de la fuente y tamaño del texto" time="0"/>
+<testcase classname="Test" name="Tests de la clase Text Getter del contenido del texto" time="0"/>
+<testcase classname="Test" name="Tests de la clase Text Setter de la coordenada X de destino" time="0"/>
+<testcase classname="Test" name="Tests de la clase Text Setter de la coordenada Y de destino" time="0"/>
+<testcase classname="Test" name="Tests de la clase Text Setter de la fuente y tamaño del texto" time="0.001"/>
+<testcase classname="Test" name="Tests de la clase Text Setter del contenido del texto" time="0"/>
+</testsuite>
