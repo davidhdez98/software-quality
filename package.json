@@ -9,9 +9,8 @@
   },
   "scripts": {
     "start": "node web-server/app.js",
-    "test": "nyc mocha -R mocha-sonar-reporter",
-    "report": "nyc --reporter=lcov --reporter=text-lcov npm test",
-    "coverage": "nyc --reporter html npm test"
+    "test": "nyc mocha",
+    "coverage": "nyc --reporter=text --reporter=lcov npm test"
   },
   "repository": {
     "type": "git",
