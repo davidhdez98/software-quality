@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Verdana";
+  font-family: Verdana;
 }
 
 header {
@@ -16,23 +16,13 @@ header {
   justify-content: center;
 }
 
-@font-face {
-  font-family: "Verdana";
-  src: url("fonts/Roboto-Light.ttf");
-}
-
- @font-face {
-  font-family: "Verdana";
-  src: url("fonts/Roboto-Bold.ttf");
-}
-
 #name {
   font-family: "Verdana";
   font-size: 2rem;
 }
 
 #name strong {
-  font-family: "Verdana";
+  font-family: Verdana;
   font-size: 2rem;
 }
 
