@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -293,7 +293,11 @@
 <a name='L234'></a><a href='#L234'>234</a>
 <a name='L235'></a><a href='#L235'>235</a>
 <a name='L236'></a><a href='#L236'>236</a>
-<a name='L237'></a><a href='#L237'>237</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -327,8 +331,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -375,6 +377,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -561,11 +565,11 @@
                   05/04/2020 - Versión para evaluación
  */                                    
 &nbsp;
-const Square = require('./square.js').Square; 
-const Point = require('./point.js').Point; 
-const Text = require('./text.js').Text; 
-&nbsp;
 'use strict';
+&nbsp;
+const Square = require('./square.js').Square;
+const Point = require('./point.js').Point;
+const Text = require('./text.js').Text;
 &nbsp;
 /** Clase que representa un tablero de ajedrez. Contiene las propiedades
  * y métodos necesarios para pintar un tablero de ajedrez en un Canvas.
@@ -628,16 +632,17 @@ class ChessBoard {
       let start = new Point(width, height);
       let square = new Square(CANVAS.width / this.size, start);
       if (color === 0) {
-        square.createSquare(CONTEXT, start, "Bisque");
+        square.createSquare(CONTEXT, start, "#f0d9b5");
         color = 1;
       } else {
-        square.createSquare(CONTEXT, start, "Sienna");
+        square.createSquare(CONTEXT, start, "#b58863");
         color = 0;
       }
       this.squares.push(square);
 &nbsp;
       if (height + (CANVAS.height / this.size) &gt;= CANVAS.height) {
-        let text = new Text(start.xCoor + 5, start.yCoor + 60, "10px Arial", letter);
+        // Letras del tablero
+        let text = new Text(start.xCoor + 5, start.yCoor + 50, "10px Arial", letter);
         text.createText(CONTEXT);
         text.fill(CONTEXT, "black");
         letter = letter.substring(0, letter.length - 1) + // Resta una letra, mediante su código ascii
@@ -647,7 +652,8 @@ class ChessBoard {
       if (width + (CANVAS.width / this.size) &gt;= CANVAS.width) {
         width = - CANVAS.width / this.size;
         height += CANVAS.height / this.size;
-        let text = new Text(start.xCoor + 55, start.yCoor + 10, "10px Arial", number);
+        // Numeración del tablero
+        let text = new Text(start.xCoor + 45, start.yCoor + 10, "10px Arial", number);
         text.createText(CONTEXT);
         text.fill(CONTEXT, "black");
         number++;
@@ -672,40 +678,40 @@ class ChessBoard {
         let source;
         let currentSquare = this.squares[square];
         if (square &gt;= 8 &amp;&amp; square &lt;= 15) {
-          source = "img/peon-blancas.png"; 
+          source = "peon-blancas.png"; 
           currentSquare.squareLabel = "knight"; // Peón
         } else if (square &gt;= 48 &amp;&amp; square &lt;= 55) {
-          source = "img/peon-negras.png";         
+          source = "peon-negras.png";         
           currentSquare.squareLabel = "knight";
         } else if (square === 0 || square === 7) {
-          source = "img/torre-blancas.png";          
+          source = "torre-blancas.png";          
           currentSquare.squareLabel = "rook"; // Torre
         } else if (square === 56 || square === 63) {
-          source = "img/torre-negras.png";           
+          source = "torre-negras.png";           
           currentSquare.squareLabel = "rook";
         } else if (square === 1 || square === 6) {
-          source = "img/caballo-blancas.png";           
+          source = "caballo-blancas.png";           
           currentSquare.squareLabel = "bishop"; // Caballo
         } else if (square === 57 || square === 62) {
-          source = "img/caballo-negras.png";           
+          source = "caballo-negras.png";           
           currentSquare.squareLabel = "bishop";
         } else if (square === 2 || square === 5) {
-          source = "img/alfil-blancas.png";           
+          source = "alfil-blancas.png";           
           currentSquare.squareLabel = "pawn"; // Alfil
         } else if (square === 58 || square === 61) {
-          source = "img/alfil-negras.png";           
+          source = "alfil-negras.png";           
           currentSquare.squareLabel = "pawn";
         } else if (square === 3) {
-          source = "img/rey-blancas.png";           
+          source = "rey-blancas.png";           
           currentSquare.squareLabel = "king"; // Rey
         } else if (square === 59) {
-          source = "img/rey-negras.png";           
+          source = "rey-negras.png";           
           currentSquare.squareLabel = "king";
         } else if (square === 4) {
-          source = "img/reina-blancas.png";           
+          source = "reina-blancas.png";           
           currentSquare.squareLabel = "queen"; // Reina
         } else {
-          source = "img/reina-negras.png";           
+          source = "reina-negras.png";           
           currentSquare.squareLabel = "queen";
         }
         currentSquare.drawPiece(CONTEXT, source, currentSquare.squareXCoor, 
@@ -729,7 +735,7 @@ class ChessBoard {
         if (currentRow[position] === '#') {
           index = (row * 8) + position;
           let square = this.squares[index];
-          let source = "img/reina-negras.png";
+          let source = "reina-negras.png";
           square.drawPiece(CONTEXT, source, square.squareXCoor, square.squareYCoor);
         }
       }
@@ -745,10 +751,10 @@ class ChessBoard {
    */
   algebraicNotation(CONTEXT, CANVAS, solution) {
     CONTEXT.clearRect(0, 0, CANVAS.width, CANVAS.height);
-    let coorX = 50;
+    let coorX = 20;
     let coorY = 50;
     let font = "15px Arial";
-    let title = new Text(50, 15, font, "Resultado en notación algebraica: " );
+    let title = new Text(20, 15, font, "Notación algebraica: " );
     title.createText(CONTEXT);
     title.fill(CONTEXT, "black");
     for (let index = 0; index &lt; solution.length; index++) {
@@ -772,7 +778,7 @@ exports.ChessBoard = ChessBoard;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun May 03 2020 20:45:39 GMT+0100 (GMT+01:00)
+                at Sat May 16 2020 15:21:32 GMT+0100 (GMT+01:00)
             </div>
         </div>
         <script src="prettify.js"></script>
