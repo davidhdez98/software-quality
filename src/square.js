@@ -148,3 +148,4 @@ class Square {
     image.src = source;
   }
 }
+exports.Square = Square;

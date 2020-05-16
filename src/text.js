@@ -149,3 +149,4 @@ class Text {
     CONTEXT.strokeText(this.content, this.coorX, this.coorY);
   }
 }
+exports.Text = Text;

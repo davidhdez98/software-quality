@@ -32,6 +32,10 @@
 
 'use strict';
 
+const Square = require('./square.js').Square;
+const Point = require('./point.js').Point;
+const Text = require('./text.js').Text;
+
 /** Clase que representa un tablero de ajedrez. Contiene las propiedades
  * y métodos necesarios para pintar un tablero de ajedrez en un Canvas.
  */
@@ -232,3 +236,4 @@ class ChessBoard {
     }
   }
 }
+exports.ChessBoard = ChessBoard;

@@ -102,3 +102,4 @@ class Line {
     return (point.yCoor === (this.slope * point.xCoor) + this.intercept);
   }
 }
+exports.Line = Line;

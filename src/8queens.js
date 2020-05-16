@@ -33,6 +33,9 @@
 
 'use strict';
 
+const Point = require('./point.js').Point;
+const Line = require('./line.js').Line;
+
 /** Clase que representa un tablero de ajedrez sobre el que se
  * resuelve el problema de las 8 reinas.
  */
@@ -187,3 +190,4 @@ class EightQueens {
     return solution;
   }
 }
+exports.EightQueens = EightQueens;

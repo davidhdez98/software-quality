@@ -107,3 +107,4 @@ class Point {
     return parseInt(lowRank) + randomColor;
   }
 }
+exports.Point = Point;

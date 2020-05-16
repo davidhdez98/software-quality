@@ -31,14 +31,23 @@
 
 'use strict';
 
-const ASSERT = chai.assert;
-const EXPECT = chai.expect;
+//const ASSERT = chai.assert;
+//const EXPECT = chai.expect;
+const ASSERT = require('chai').assert;
+const EXPECT = require('chai').expect;
+
+const Point = require('../src/point.js').Point;
+const Line = require('../src/line.js').Line;
+const Text = require('../src/text.js').Text;
+const Square = require('../src/square.js').Square;
+const ChessBoard = require('../src/chessboard.js').ChessBoard;
+const EightQueens = require('../src/8queens.js').EightQueens;
 
 // Tests de la clase Point
 describe('Tests de la clase Point', () => {
   const POINT = new Point(23, 42);
-  const CANVAS = document.getElementById('canvas');
-  const CONTEXT = CANVAS.getContext('2d');
+  //const CANVAS = document.getElementById('canvas');
+  //const CONTEXT = CANVAS.getContext('2d');
 
   // Getters
   it('Getter de la coordenada X', function () {
@@ -60,10 +69,10 @@ describe('Tests de la clase Point', () => {
     ASSERT.equal(POINT.yCoor, 50);
   });
 
-  it('drawPoint dibuja un punto en el Canvas', function () {
+  /*it('drawPoint dibuja un punto en el Canvas', function () {
     POINT.drawPoint(CONTEXT, 5, "blue");
     ASSERT.equal(CONTEXT.strokeStyle, '#0000ff'); 
-  });
+  });*/
 
   it('random crea un número aleatorio', function () {
     let number = POINT.random(10, 20);
@@ -122,9 +131,9 @@ describe('Tests de la clase Line', () => {
 
 // Tests de la clase Square
 describe('Tests de la clase Square', () => {
-  const CANVAS = document.getElementById('canvas');
-  const CONTEXT = CANVAS.getContext('2d');
-  let square = new Square(CANVAS.width / 8, new Point(5, 10));
+  //const CANVAS = document.getElementById('canvas');
+  //const CONTEXT = CANVAS.getContext('2d');
+  let square = new Square(0, new Point(5, 10));
 
   // Getters
   it('Getter del tamaño de la casilla', function () {
@@ -164,7 +173,7 @@ describe('Tests de la clase Square', () => {
     ASSERT.equal(square.squareLabel, 'king');
   });
 
-  it('Método createSquare: pinta la casilla en el Canvas', function () {
+  /*it('Método createSquare: pinta la casilla en el Canvas', function () {
     square.createSquare(CONTEXT, new Point(0, 0), "black");
     ASSERT.equal(CONTEXT.strokeStyle, '#000000'); // Código del color negro
   });
@@ -176,13 +185,13 @@ describe('Tests de la clase Square', () => {
     let point = new Point(10, 15);
     square.drawPiece(CONTEXT, source, point.xCoor, point.yCoor);
     EXPECT(source).to.be.a('string');
-  });
+  });*/
 });
 
 // Tests de la clase ChessBoard
 describe('Tests de la clase ChessBoard', () => {
-  const CANVAS = document.getElementById('canvas');
-  const CONTEXT = CANVAS.getContext('2d');
+  //const CANVAS = document.getElementById('canvas');
+  //const CONTEXT = CANVAS.getContext('2d');
   let board = new ChessBoard(10);
 
   // Getters
@@ -207,7 +216,7 @@ describe('Tests de la clase ChessBoard', () => {
     EXPECT(board.boardSquares[0]).to.be.an('object');
   });
 
-  it('Método createBoard: crea el tablero y lo pinta en el Canvas', function () {
+  /*it('Método createBoard: crea el tablero y lo pinta en el Canvas', function () {
     board.createBoard(CONTEXT, CANVAS);
     ASSERT.equal(board.squares.length, 1);
   });
@@ -215,7 +224,7 @@ describe('Tests de la clase ChessBoard', () => {
   it('Método newGame: dibuja las fichas del comienzo del juego en el tablero', function () {
     board.newGame(CONTEXT);
     ASSERT.equal(board.squares[0].label, 'rook'); // Hay una torre en el tablero
-  });
+  });*/
 });
 
 // Tests de la clase EightQueens
