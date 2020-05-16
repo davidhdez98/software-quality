@@ -1,9 +1,10 @@
-language: node_js
-node_js:
-  - "6"
-jdk:
-  - oraclejdk8
 addons:
-  sonarcloud: true
-script:
-  - sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.organization=davidhdez98-github -Dsonar.projectKey=software-quality -Dsonar.sources='./src' -X
+   sonarcloud:
+     organization: "davidhdez98"
+     token:
+       secure: $SONAR_TOKEN
+jobs:
+   include:
+     - stage: "Run Tests & SonarCloud Analysis"
+       script:
+         - sonar-scanner -Dsonar.projectKey=davidhdez98_software-quality
