@@ -7,4 +7,3 @@ addons:
   sonarcloud: true
 script:
   - npm run coverage
-  - sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.organization=davidhdez98-github -Dsonar.projectKey=davidhdez98_software-quality -Dsonar.sources='./src' -X
