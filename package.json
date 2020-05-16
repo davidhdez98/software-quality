@@ -28,6 +28,20 @@
     "babel-plugin-istanbul": "^6.0.0",
     "jest-sonar-reporter": "^2.0.0",
     "mocha-sonar-reporter": "^0.1.6",
-    "nyc": "^15.0.1"
+    "nyc": "^15.0.1",
+    "sonar-scanner": "^3.1.0"
+  },
+  "jest": {
+    "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "jestSonar": {
+    "reportPath": "reports",
+    "reportFile": "test-reporter.xml",
+    "indent": 4,
+    "env": {
+      "test": {
+        "reportPath": "reports-test"
+      }
+    }
   }
 }
