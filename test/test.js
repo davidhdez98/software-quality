@@ -141,7 +141,7 @@ describe('Tests de la clase Square', () => {
   });
 
   it('Getter de la coordenada X inicial', function () {
-    ASSERT.equal(square.squareXCoor, 5);
+    ASSERT.equal(square.squareXCoor, 6);
   });
 
   it('Getter de la coordenada Y inicial', function () {
