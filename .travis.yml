@@ -6,4 +6,4 @@ jdk:
 addons:
   sonarcloud: true
 script:
-  - npm run coverage
+  - sudo npm run coverage
