@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Hernández Suárez, David</title>
+    <link rel="stylesheet" href="style.css">    
+  </head>
+  <body>
+    <header>
+      <a href="#nombre" id="name">lichess.org</a>
+      <a href="#jugar">JUGAR</a>
+      <a href="#aprender">APRENDER</a>
+      <a href="#observar">OBSERVAR</a>
+      <a href="#comunidad">COMUNIDAD</a>
+      <a href="#herramientas">HERRAMIENTAS</a>
+    </header>
+    <div class="global">
+      <h1 align="right">David Hernández Suárez</h1>
+      <h1 align="center">Ajedrez</h1>
+
+      <div class="options">
+        <input type="checkbox" id="reinas" value="queen">
+        <label for="reinas"> 8 reinas generalizado</label><br>
+        <button type="button" onclick="eightQueens();" id="solution">Generar solución</button>
+        <button type="button" onclick="eightQueens();" id="nextsolution">Siguiente solución</button>
+        <button type="button" onclick="initialBoard();" id="game">Partida de ajedrez</button>
+      </div>      
+    </div>
+    <canvas id="canvas" width="430" height="430" style="border:3px solid black;"></canvas>
+    <canvas id="visualizacion" width="200" height="300" style="border:1px solid white;"></canvas>     
+    <script src="point.js"></script>
+    <script src="line.js"></script>
+    <script src="square.js"></script>
+    <script src="chessboard.js"></script>
+    <script src="8queens.js"></script>
+    <script src="text.js"></script>
+    <script src="chess.js"></script>             
+    <footer>
+      <pre>
+      Universidad de La Laguna  -  Grado en Ingeniería Informática
+              Programación de Aplicaciones Interactivas
+      </pre>
+    </footer> 
+  </body>
+</html>

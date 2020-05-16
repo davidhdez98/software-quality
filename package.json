@@ -1,25 +1,31 @@
 {
-  "name": "@ull-esit-pl-1920/p10-t2-lexgen-code-alu0101048239",
-  "version": "1.1.0",
-  "description": "",
+  "name": "ajedrez",
+  "version": "1.0.0",
+  "description": "This directory is organised as follows:",
   "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
   "scripts": {
-    "test": "jest --coverage"
+    "start": "node web-server/app.js",
+    "test": "nyc mocha",
+    "coverage": "nyc --reporter html npm test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ULL-ESIT-PL-1920/p10-t2-lexgen-code-alu0101048239.git"
+    "url": "git+https://github.com/ULL-ESIT-INF-PAI-2019-2020/pai-p11-chess-alu0101048239.git"
   },
+  "keywords": [],
   "author": "David Hernández Suárez",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ULL-ESIT-PL-1920/p10-t2-lexgen-code-alu0101048239/issues"
-  },
-  "homepage": "https://github.com/ULL-ESIT-PL-1920/p10-t2-lexgen-code-alu0101048239#readme",
-  "devDependencies": {
-    "jest": "^25.2.6"
-  },
   "dependencies": {
-    "xregexp": "^4.3.0"
+    "chai": "^4.2.0",
+    "express": "^4.17.1",
+    "mocha": "^7.1.1"
+  },
+  "devDependencies": {
+    "babel-plugin-istanbul": "^6.0.0",
+    "nyc": "^15.0.1"
   }
 }
