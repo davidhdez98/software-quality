@@ -1,9 +1,8 @@
-language: node_js
-node_js:
-  - "6"
-jdk:
-  - oraclejdk8
 addons:
-  sonarcloud: true
+  sonarcloud:
+    organization: "davidhdez98" # the key of the org you chose at step #3
+    token:
+      secure: "fae1e9b478bcd6fc4bbcfd0aed89af9552d64346" # encrypted value of your token
 script:
-  - sonar-scanner -Dsonar.login=$SONAR-TOKEN -Dsonar.organization=davidhdez98-github -Dsonar.projectKey=davidhdez98_software-quality -Dsonar.sources='./src' -X
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
