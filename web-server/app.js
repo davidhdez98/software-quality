@@ -12,6 +12,7 @@ APP.use(EXPRESS.static(PATH.join(__dirname, '../coverage')));
 APP.use(EXPRESS.static(PATH.join(__dirname, '../tests')));
 APP.use(EXPRESS.static(PATH.join(__dirname, '../docs')));
 APP.use(EXPRESS.static(PATH.join(__dirname, '../img')));
+APP.use(EXPRESS.static(PATH.join(__dirname, '../node_modules')));
 
 
 // Listen for requests
