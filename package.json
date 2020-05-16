@@ -1,47 +1,25 @@
 {
-  "name": "software-quality",
-  "version": "1.0.0",
+  "name": "@ull-esit-pl-1920/p10-t2-lexgen-code-alu0101048239",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "doc": "docs",
-    "test": "tests"
-  },
   "scripts": {
-    "start": "node web-server/app.js",
-    "test": "nyc mocha",
-    "coverage": "nyc --reporter=text --reporter=lcov npm test"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidhdez98/software-quality.git"
+    "url": "git+https://github.com/ULL-ESIT-PL-1920/p10-t2-lexgen-code-alu0101048239.git"
   },
-  "keywords": [],
-  "author": "David Hernández Suárez <alu0101048239@ull.edu.es> (https://github.com/alu0101048239)",
+  "author": "David Hernández Suárez",
   "license": "ISC",
-  "dependencies": {
-    "chai": "^4.2.0",
-    "express": "^4.17.1",
-    "mocha": "^7.1.1"
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-PL-1920/p10-t2-lexgen-code-alu0101048239/issues"
   },
+  "homepage": "https://github.com/ULL-ESIT-PL-1920/p10-t2-lexgen-code-alu0101048239#readme",
   "devDependencies": {
-    "babel-plugin-istanbul": "^6.0.0",
-    "jest-sonar-reporter": "^2.0.0",
-    "mocha-sonar-reporter": "^0.1.6",
-    "nyc": "^15.0.1",
-    "sonar-scanner": "^3.1.0"
+    "jest": "^25.2.6"
   },
-  "jest": {
-    "testResultsProcessor": "jest-sonar-reporter"
-  },
-  "jestSonar": {
-    "reportPath": "reports",
-    "reportFile": "test-reporter.xml",
-    "indent": 4,
-    "env": {
-      "test": {
-        "reportPath": "reports-test"
-      }
-    }
+  "dependencies": {
+    "xregexp": "^4.3.0"
   }
 }
