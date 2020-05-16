@@ -1,7 +1,7 @@
 {
-  "name": "ajedrez",
+  "name": "software-quality",
   "version": "1.0.0",
-  "description": "This directory is organised as follows:",
+  "description": "",
   "main": "index.js",
   "directories": {
     "doc": "docs",
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ULL-ESIT-INF-PAI-2019-2020/pai-p11-chess-alu0101048239.git"
+    "url": "git+https://github.com/davidhdez98/software-quality.git"
   },
   "keywords": [],
-  "author": "David Hernández Suárez",
+  "author": "David Hernández Suárez <alu0101048239@ull.edu.es> (https://github.com/alu0101048239)",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
