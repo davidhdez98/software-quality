@@ -124,7 +124,7 @@ header a {
   position: relative;
   background: white;
   padding: 0;
-  /*position: relative;*/
+  position: relative;
   display: block;  
   left: 5%;
 }
