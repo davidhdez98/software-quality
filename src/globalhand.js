@@ -91,4 +91,12 @@ class GlobalHand {
       }
     }
   }
+
+  /**
+   * @desc Método no utilizado nunca, creado para comprobar el 
+   * resultado obtenido en el análisis de SonarCloud.
+   */
+  unusedMethod() {
+    this.cards.push(newCard);
+  }
 }
