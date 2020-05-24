@@ -67,11 +67,12 @@ function initialBoard() {
  * en notación algebraica.
  */
 function eightQueens() {
+  let solution = 0;
   const CANVAS = document.getElementById("canvas");
   const CONTEXT = CANVAS.getContext("2d");
   const CANVAS2 = document.getElementById("visualizacion");
   const CONTEXT2 = CANVAS2.getContext("2d");
-  let queens = new EightQueens(8);
+  var queens = new EightQueens(8);
   let problemType = document.getElementById("reinas").checked;
   queens.problemType = problemType;
   queens.colocarReina(0);
@@ -92,9 +93,7 @@ function eightQueens() {
  */
 function main() {
   board();
-  let currentSolution = 0;
 }
-
 
 board();
 let currentSolution = 0; 
