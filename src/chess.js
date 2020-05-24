@@ -92,7 +92,9 @@ function eightQueens() {
  * el resultado obtenido en el análisis de SonarCloud.
  */
 function main() {
-  board();
+  for (index = 0; index < 10; index++) {
+    console.log('Test');
+  }
 }
 
 board();
