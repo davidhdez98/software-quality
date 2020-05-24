@@ -55,6 +55,10 @@ function initialBoard() {
   let board = new ChessBoard(8);
   board.createBoard(CONTEXT, CANVAS);
   board.newGame(CONTEXT);
+  let x = false;
+  if (x == true) {
+    console.log("X = true");
+  }
 }
 
 /**
@@ -81,5 +85,16 @@ function eightQueens() {
     currentSolution++;
   }
 }
+
+/**
+ * Función principal de prueba, a la que no se invoca nunca, para comprobar
+ * el resultado obtenido en el análisis de SonarCloud.
+ */
+function main() {
+  board();
+  let currentSolution = 0;
+}
+
+
 board();
-var currentSolution = 0; 
+let currentSolution = 0; 
