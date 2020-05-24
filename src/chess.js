@@ -96,4 +96,4 @@ function main() {
 }
 
 board();
-let currentSolution = 0; 
+let currentSolution = 0
