@@ -83,8 +83,10 @@ function eightQueens() {
     board.solution8Queens(CONTEXT, queens.arraySolutions[currentSolution]);
     board.algebraicNotation(CONTEXT2, CANVAS2, queens.arraySolutions[currentSolution]);
     currentSolution++;
-  
+  }
   console.log(variable);
+  let word = 'hola';
+  let add = word + 4;
 }
 
 board();
